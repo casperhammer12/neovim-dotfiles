@@ -1,0 +1,40 @@
+ui:
+  stl: feline
+  bfl: tabline
+  tree: nvimtree
+
+autocomplete:
+  framework: coq
+  snippets: null
+  lsp: true
+
+plugins:
+  - 'tpope/vim-commentary'
+  - 'tiagovla/tokyodark.nvim'
+  - 'windwp/nvim-autopairs'
+
+options:
+  mouse: a
+  relativenumber: true
+  number: true
+  clipboard: unnamedplus
+  timeoutlen: 500
+  shiftwidth: 4
+  splitbelow: true
+  splitright: true
+  autoindent: true
+  smartindent: true
+  breakindent: true
+  copyindent: true
+  expandtab: true
+  cursorline: true
+  cursorlineopt: line
+  cmdheight: 2
+  hlsearch: false
+  ruler: true
+  scrolloff: 8
+  confirm: true
+  winblend: 10
+  wrap: false
+
+colorscheme: tokyodark
