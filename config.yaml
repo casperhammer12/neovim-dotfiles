@@ -1,7 +1,7 @@
 ui:
   stl: feline
-  bfl: tabline
-  tree: nvimtree
+  bfl: bufferline
+  tree: chadtree
 
 autocomplete:
   framework: coq
@@ -28,13 +28,19 @@ options:
   copyindent: true
   expandtab: true
   cursorline: true
-  cursorlineopt: line
+  cursorlineopt: number
   cmdheight: 2
   hlsearch: false
   ruler: true
-  scrolloff: 8
+  scrolloff: 10
   confirm: true
   winblend: 10
   wrap: false
 
 colorscheme: tokyodark
+
+variables:
+  tokyodark_transparent_background: false
+  tokyodark_enable_italic: true
+  tokyodark_enable_italic_comment: true
+  tokyodark_color_gamma: "0.9"
