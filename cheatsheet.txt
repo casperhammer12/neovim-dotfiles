@@ -1,0 +1,33 @@
+## cheatsheet @user @custom
+Open Tree Style Explorer      | <C-n>
+Delete buffer                 | <Leader>bd
+Snap buffer from existence    | <Leader>bw
+Open Config                   | <Leader>cc  
+Open Config - Plugins         | <Leader>cp  
+Open Config - Editor opts     | <Leader>co  
+Open Config - Mappings        | <Leader>cm  
+Change Colorscheme            | <Leader>ctc  
+Toggle Scheme Variant         | <Leader>ctt  
+Find Files                    | <Leader>ff  
+Live Grep                     | <Leader>fg  
+List Buffers                  | <Leader>fb  
+HelpTags                      | <Leader>fh 
+Write to File                 | <Leader>fw  
+Write and Source current File | <Leader>flo   
+Open New Buffer               | <Leader>nb  
+ | <Leader>ps  
+ | <Leader>pi  
+ | <Leader>pr  
+ | <Leader>pc  
+ | <Leader>pu  
+ | <Leader>pp  
+ | <Leader>tn  
+ | <Leader>tp  
+ | <TAB>
+ | <S-Tab>
+ | <Leader>x  
+ | <Leader>/  
+ | <C-h>
+ | <C-j>
+ | <C-k>
+ | <C-l>

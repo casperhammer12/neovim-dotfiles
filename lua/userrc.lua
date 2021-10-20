@@ -5,15 +5,17 @@ local M = {}
 M.options,M.plugins,M.mappings,M.config = {},{},{},{}
 
 M.options = {
-    colorscheme    = 'material',
+    colorscheme    = 'zephyr',
     mouse          = 'a',
     cursorlineopt  = 'number,screenline',
     clipboard      = 'unnamedplus',
     nrformats      = 'octal,hex,alpha,unsigned',
+    spelllang	   = {'en_us'},
     shiftwidth     = 4,
     cmdheight      = 2,
     scrolloff      = 10,
     winblend       = 10,
+    spell	   = true,
     expandtab      = true,
     termguicolors  = true,
     splitbelow     = true,
@@ -37,15 +39,13 @@ M.plugins = {
     colorschemes = {
         'folke/tokyonight.nvim',
         'glepnir/zephyr-nvim',
-        'norcalli/nvim-base16.lua',
+        'sainnhe/edge',
+        'RRethy/nvim-base16',
         'marko-cerovac/material.nvim',
-        'ray-x/aurora',
-        'Pocco81/catppuccino.nvim',
-        'rose-pine/neovim',
     },
 
     completion =  {
-        {
+        --[[ {
             'ms-jpq/coq_nvim',
             branch = 'coq',
             run = 'COQdeps',
@@ -58,6 +58,21 @@ M.plugins = {
         {
             'ms-jpq/coq.thirdparty',
             branch = '3p' 
+        }, --]]
+
+        {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-nvim-lua',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-emoji',
+            'f3fora/cmp-spell',
+            'hrsh7th/cmp-path',
+            { 'hrsh7th/nvim-cmp', config = function() require('plugins.completion.cmp') end }
+        },
+        {
+            'L3MON4D3/LuaSnip',
+            'rafamadriz/friendly-snippets',
+            'saadparwaiz1/cmp_luasnip'
         },
     },
 
@@ -72,18 +87,19 @@ M.plugins = {
             requires = { {'kyazdani42/nvim-web-devicons', opt = true}, {'shadmansaleh/lualine.nvim', opt = true} },
             config = function() require('plugins.ui.tabline') end 
         },
-        --[[ {
+        {
             'ms-jpq/chadtree',
             branch = 'chad',
-            run = 'python3 -m chadtree deps',
-            config = function() require('plugins.ui.chadtree') end
-        } --]]
-        {
+            run = 'python -m chadtree deps',
+            config = function() require('plugins.ui.chadtree') end,
+            cmd = 'CHADopen',
+        },
+        --[[ {
             'kyazdani42/nvim-tree.lua',
             requires = { {'nvim-lua/plenary.nvim'} },
             config = function() require('plugins.ui.nvim-tree') end,
             cmd = 'NvimTreeToggle'
-        },
+        }, --]]
     },
 
     languages = {
@@ -122,6 +138,14 @@ M.plugins = {
             "folke/todo-comments.nvim",
             requires = "nvim-lua/plenary.nvim",
         },
+        {
+            'sudormrfbin/cheatsheet.nvim',
+            requires = {
+                'nvim-lua/plenary.nvim',
+                'nvim-lua/popup.nvim',
+                'nvim-telescope/telescope.nvim',
+            }
+        }
     },
 },
 config = {}
@@ -129,8 +153,8 @@ config = {}
 
 
 M.mappings = {
-    ['n|<C-n>']       = mapc('NvimTreeToggle'):noremap():silent(),
-    -- ['n|<C-n>']       = mapc('CHADopen'):noremap():silent(),
+    -- ['n|<C-n>']       = mapc('NvimTreeToggle'):noremap():silent(),
+    ['n|<C-n>']       = mapc('CHADopen'):noremap():silent(),
     -- <Leader>b - 'buffer'
     ['n|<Leader>bd']  = mapc('lua require(\'bufdelete\').bufdelete(0, false)'):noremap():silent(),
     ['n|<Leader>bw']  = mapc('lua require(\'bufdelete\').bufwipeout(0, false)'):noremap():silent(),
@@ -155,8 +179,9 @@ M.mappings = {
     ['n|<Leader>ps']  = mapc('PackerSync'):noremap():silent(),
     ['n|<Leader>pi']  = mapc('PackerStatus'):noremap():silent(),
     ['n|<Leader>pr']  = mapc('PackerClean'):noremap():silent(),
-    ['n|<Leader>pc']  = mapc('PackerCompile profile=true'):noremap():silent(),
+    ['n|<Leader>pc']  = mapc('PackerCompile profile=1'):noremap():silent(),
     ['n|<Leader>pu']  = mapc('PackerUpdate'):noremap():silent(),
+    ['n|<Leader>pp']  = mapc('PackerProfile'):noremap():silent(),
     -- <Leader>t - 'tab' (actually buffer)
     ['n|<Leader>tn']  = mapc('TablineBufferNext'):noremap():silent(),
     ['n|<Leader>tp']  = mapc('TablineBufferPrevious'):noremap():silent(),
@@ -165,9 +190,9 @@ M.mappings = {
     -- <Leader>x - 'delete'
     ['n|<Leader>x']   = mapc('lua require(\'bufdelete\').bufdelete(0, false)'):noremap():silent(),
     -- <Leader>/ - 'comment'
-    ['n|<Leader>/']   = mapk('gc'):noremap():silent(),
-    ['v|<Leader>/']   = mapk('gc'):noremap():silent(),
-    ['x|<Leader>/']   = mapk('gc'):noremap():silent(),
+    ['n|<Leader>/']   = mapk('gcc'):noremap():silent(),
+    ['v|<Leader>/']   = mapk('gbc'):noremap():silent(),
+    ['x|<Leader>/']   = mapk('gbc'):noremap():silent(),
     -- Multiplex nav keys
     ['n|<C-h>']       = mapk('<C-w>h'):noremap():silent(),
     ['n|<C-j>']       = mapk('<C-w>j'):noremap():silent(),

@@ -73,30 +73,57 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim"
   },
-  aurora = {
+  LuaSnip = {
     loaded = true,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\aurora"
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip"
   },
   ["bufdelete.nvim"] = {
     loaded = true,
     path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufdelete.nvim"
   },
-  ["catppuccino.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\catppuccino.nvim"
+  chadtree = {
+    commands = { "CHADopen" },
+    config = { "\27LJ\2\0023\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\24plugins.ui.chadtree\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\chadtree"
   },
-  ["coq.artifacts"] = {
+  ["cmp-buffer"] = {
     loaded = true,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coq.artifacts"
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer"
   },
-  ["coq.thirdparty"] = {
+  ["cmp-emoji"] = {
     loaded = true,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coq.thirdparty"
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-emoji"
   },
-  coq_nvim = {
-    config = { "\27LJ\2\0026\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\27plugins.completion.coq\frequire\0" },
+  ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coq_nvim"
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path"
+  },
+  ["cmp-spell"] = {
+    loaded = true,
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-spell"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip"
+  },
+  edge = {
+    loaded = true,
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\edge"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets"
   },
   ["indent-guides.nvim"] = {
     loaded = true,
@@ -111,13 +138,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\material.nvim"
   },
-  neovim = {
+  ["nvim-base16"] = {
     loaded = true,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neovim"
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-base16"
   },
-  ["nvim-base16.lua"] = {
+  ["nvim-cmp"] = {
+    config = { "\27LJ\2\0026\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\27plugins.completion.cmp\frequire\0" },
     loaded = true,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-base16.lua"
+    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -135,13 +163,6 @@ _G.packer_plugins = {
   ["nvim-spectre"] = {
     loaded = true,
     path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-spectre"
-  },
-  ["nvim-tree.lua"] = {
-    commands = { "NvimTreeToggle" },
-    config = { "\27LJ\2\0024\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\25plugins.ui.nvim-tree\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\gaurav\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     config = { "\27LJ\2\0022\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\23plugins.treesitter\frequire\0" },
@@ -199,34 +220,34 @@ time([[Defining packer_plugins]], false)
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\0022\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\23plugins.ui.lualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugins.telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
--- Config for: coq_nvim
-time([[Config for coq_nvim]], true)
-try_loadstring("\27LJ\2\0026\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\27plugins.completion.coq\frequire\0", "config", "coq_nvim")
-time([[Config for coq_nvim]], false)
--- Config for: tabline.nvim
-time([[Config for tabline.nvim]], true)
-try_loadstring("\27LJ\2\0022\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\23plugins.ui.tabline\frequire\0", "config", "tabline.nvim")
-time([[Config for tabline.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\0026\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\27plugins.completion.cmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
 -- Config for: pears.nvim
 time([[Config for pears.nvim]], true)
 try_loadstring("\27LJ\2\0023\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\npears\frequire\0", "config", "pears.nvim")
 time([[Config for pears.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-try_loadstring("\27LJ\2\2<\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0!plugins.completion.lspconfig\frequire\0", "config", "nvim-lspconfig")
-time([[Config for nvim-lspconfig]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugins.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\0022\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\23plugins.treesitter\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
+-- Config for: tabline.nvim
+time([[Config for tabline.nvim]], true)
+try_loadstring("\27LJ\2\0022\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\23plugins.ui.tabline\frequire\0", "config", "tabline.nvim")
+time([[Config for tabline.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\2<\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0!plugins.completion.lspconfig\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file CHADopen lua require("packer.load")({'chadtree'}, { cmd = "CHADopen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 if should_profile then save_profiles() end

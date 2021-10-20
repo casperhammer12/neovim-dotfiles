@@ -3,13 +3,17 @@ local map_opts = {}
 
 function map_opts:new()
     local conds = {
-	cmd = '',
-	opts = {
-	    noremap = false,
-	    expr = false,
-	    silent = false,
-	    nowait = false
-	}
+        cmd = '',
+        opts = {
+            noremap = false,
+            expr = false,
+            silent = false,
+            nowait = false
+        },
+        cht = {
+            key = nil,
+            desc = nil
+        }
     }
     setmetatable(conds, self)
     self.__index = self
@@ -58,12 +62,12 @@ end
 
 function M.set_mapping(map)
     for k,v in pairs(map) do
-	local mode,kmap = k:match('([^|]*)|?(.*)')
-	if type(v) == 'table' then
-	    local rhs = v.cmd
-	    local opts = v.opts 
-	    vim.api.nvim_set_keymap(mode, kmap, rhs, opts)
-	end
+        local mode,kmap = k:match('([^|]*)|?(.*)')
+        if type(v) == 'table' then
+            local rhs = v.cmd
+            local opts = v.opts 
+            vim.api.nvim_set_keymap(mode, kmap, rhs, opts)
+        end
     end
 end
 
